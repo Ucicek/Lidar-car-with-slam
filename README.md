@@ -1,9 +1,18 @@
-# Lidar-car-with-slam
-An autonomous car that can navigate its environment using only LIDAR for sensing. The primary goal is to allow the car to determine its position in real-time and move from one point to another autonomously, avoiding obstacles.
-
 # Autonomous Car Navigation System
 
-Using an **NVIDIA Jetson** and **ROS Melodic**, this project aims to develop an autonomous car capable of navigating its environment using LIDAR as its primary sensor. 
+Using an **NVIDIA Jetson** and **ROS Melodic**, this project aims to develop an autonomous car capable of navigating its environment using LIDAR as its primary sensor.
+
+## Table of Contents
+
+- [Objective](#objective)
+- [Key Components](#key-components)
+  - [Hardware](#hardware)
+  - [Software](#software)
+- [System Workflow](#system-workflow)
+- [Visualization and Debugging](#visualization-and-debugging)
+- [Challenges](#challenges)
+- [Demo](#demo)
+- [Outcome](#outcome)
 
 ## Objective
 
@@ -21,7 +30,7 @@ Develop an autonomous car that can interpret its surroundings using LIDAR. It sh
 - **ROS Melodic**: The backbone of the robot's operations.
 - **Hector SLAM**: Used for simultaneous mapping and localization without odometry data.
 - **Move_Base**: Responsible for path planning and guiding the car to its destination.
-- **URDF (Unified Robot Description Format)**: A XML-based description of the robot's model, including its structure and joint dynamics. In this project, it defines the robot's physical properties, including its wheels and LIDAR.
+- **URDF (Unified Robot Description Format)**: An XML-based description of the robot's model, including its structure and joint dynamics. In this project, it defines the robot's physical properties, including its wheels and LIDAR.
 - **Custom Node (Motor Command Converter)**: A ROS node developed specifically for this project to translate `move_base` commands into instructions that the car's motor controller can execute. This bridge ensures that high-level navigation commands result in physical movement of the car.
 
 ## System Workflow
@@ -38,9 +47,14 @@ Develop an autonomous car that can interpret its surroundings using LIDAR. It sh
 
 ## Challenges
 
-- Relying solely on LIDAR data demands accurate interpretation and response mechanisms.
-- Parameters for Hector SLAM and Move_Base need fine-tuning for precise localization and efficient navigation.
-- Ensuring seamless translation of high-level navigation commands to motor commands without delays or errors.
+- **LIDAR Limitations**: Relying solely on LIDAR data demands accurate interpretation and response mechanisms.
+- **Tuning**: Parameters for Hector SLAM and Move_Base need fine-tuning for precise localization and efficient navigation.
+- **Motor Control**: Working with DC motors and the L298N motor driver presents challenges due to their inherent imprecision. The motors may not provide exact movement as expected, leading to deviations from the desired path.
+- **Command Conversion**: Ensuring seamless translation of high-level navigation commands to motor commands without delays or errors.
+
+## Demo
+
+Demo video will be uploaded within the next few days
 
 ## Outcome
 
