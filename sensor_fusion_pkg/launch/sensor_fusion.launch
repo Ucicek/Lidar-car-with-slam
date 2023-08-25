@@ -1,0 +1,7 @@
+<launch>
+  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization">
+    <rosparam command="load" file="$(find sensor_fusion_pkg)/config/ekf_sensor_fusion.yaml" />
+  </node>
+  <node pkg="sensor_fusion_pkg" type="imu_tf_broadcaster.py" name="imu_tf_broadcaster" />
+</launch>
+

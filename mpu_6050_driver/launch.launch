@@ -1,0 +1,8 @@
+<launch>
+
+  <node name="imu_node" pkg="mpu_6050_driver" type="imu_node.py" output="screen" />
+  
+  <node name="tf_broadcaster_imu" pkg="mpu_6050_driver" type="tf_broadcaster_imu.py" output="screen" />
+
+</launch>
+

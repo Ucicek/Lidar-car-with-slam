@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<robot name="my_car_robot">
+  
+  <!-- Chassis -->
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0 0 5" rpy="0 0 0"/>
+      <mass value="5"/> <!-- Modify the mass according to your robot -->
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+
+
+  <!-- Left Wheel -->
+  <link name="left_wheel">
+    <origin xyz="-0.075 -0.03 0" rpy="0 0 0"/> <!-- The left wheel is 7.5 cm left and 3 cm down from the base_link -->
+  </link>
+
+  <!-- Right Wheel -->
+  <link name="right_wheel">
+    <origin xyz="0.075 -0.03 0" rpy="0 0 0"/> <!-- The right wheel is 7.5 cm right and 3 cm down from the base_link -->
+  </link>
+
+  <!-- Joints -->
+  <!-- Here we are considering the joints as fixed. -->
+ 
+
+  <joint name="left_wheel_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="left_wheel"/>
+  </joint>
+
+  <joint name="right_wheel_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="right_wheel"/>
+  </joint>
+  
+</robot>
+
