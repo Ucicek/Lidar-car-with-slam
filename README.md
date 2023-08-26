@@ -11,8 +11,8 @@ Using an **NVIDIA Jetson** and **ROS Melodic**, this project aims to develop an 
 - [System Workflow](#system-workflow)
 - [Visualization and Debugging](#visualization-and-debugging)
 - [Challenges](#challenges)
-- [Demo](#demo)
 - [Outcome](#outcome)
+- [Next Steps](#next-steps)
 
 ## Objective
 
@@ -51,12 +51,15 @@ Develop an autonomous car that can interpret its surroundings using LIDAR. It sh
 - **Tuning**: Parameters for Hector SLAM and Move_Base need fine-tuning for precise localization and efficient navigation.
 - **Motor Control**: Working with DC motors and the L298N motor driver presents challenges due to their inherent imprecision. The motors may not provide exact movement as expected, leading to deviations from the desired path.
 - **Command Conversion**: Ensuring seamless translation of high-level navigation commands to motor commands without delays or errors.
+- **Nivida Jetson**: Due to limitations in establishing a wireless connection with the NVIDIA Jetson, we were unable to record the demo. However, the robot's functionality has been successfully verified in a constrained environment.
 
-## Demo
-
-Demo video will be uploaded within the next few days
 
 ## Outcome
 
 The outcome is a car capable of understanding its position relative to a map and navigating to specified destinations autonomously.
+
+## Next Steps
+
+- Implement sensor fusion techniques that incorporate data from an Inertial Measurement Unit (IMU) to enhance the accuracy and reliability of the robot's state estimates, including its position, orientation, and velocity.
+
 
