@@ -58,6 +58,20 @@ Develop an autonomous car that can interpret its surroundings using LIDAR. It sh
 
 The outcome is a car capable of understanding its position relative to a map and navigating to specified destinations autonomously.
 
+**Final Map obtained from the slam algorithm**
+
+<img width="485" alt="image" src="https://github.com/Ucicek/Lidar-car-with-slam/assets/77251886/a817caa4-7ee3-4307-b706-160718a96973">
+
+**Adjusted Map***
+
+<img width="383" alt="image" src="https://github.com/Ucicek/Lidar-car-with-slam/assets/77251886/2d26268b-176a-44da-af89-76c64699d37e">
+
+
+**Final look of the car**
+
+<img width="485" alt="image" src="https://github.com/Ucicek/Lidar-car-with-slam/assets/77251886/042acdf7-ae93-4d50-9d2d-a4c4e5c4fbf5">
+
+
 ## Next Steps
 
 - Implement sensor fusion techniques that incorporate data from an Inertial Measurement Unit (IMU) to enhance the accuracy and reliability of the robot's state estimates, including its position, orientation, and velocity.
